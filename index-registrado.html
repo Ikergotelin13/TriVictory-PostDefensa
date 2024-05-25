@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriVictory</title>
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header id="headerContainer">
+        <div id="cabecera">
+            <a href="./index-registrado.html"><img src="./assets/img/trivictory -02.png" alt="" id="logo"></a>
+            <ul id="lista-redes">
+                <li><a href="https://www.facebook.com/?locale=es_ES"><img src="./assets/img/facebook.png" alt=""></a>
+                </li>
+                <li><a href="https://www.instagram.com"><img src="./assets/img/instagram.png" alt=""></a></li>
+                <li><a href="https://twitter.com/home?lang=es"><img src="./assets/img/x.png"></a></li>
+                <li><img src="./assets/img/perfil.png" alt=""></li>
+                <li><a href="./index.html"><button id="boton-cerrar-sesion">Cerrar sesion</button></a></li>
+            </ul>
+        </div>
+
+        <nav id="navegacion" class="animacion-navegacion">
+            <div id="contenedor-menu"  class="animacion-menu">
+                <ul id="lista-menu">
+                    <li id="lista-eventos" class="nombre-secciones-menu">
+                        <a href="./paginas/eventos.php" class="enlaces-header">Eventos</a>
+                    </li>
+                    <li class="nombre-secciones-menu"><a href="./paginas/noticias.html" class="enlaces-header">
+                            Noticias</a></li>
+                    <li id="lista-multimedia" class="nombre-secciones-menu"><a href="./paginas/resultados.php"
+                            class="enlaces-header">Multimedia</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--SLIDER-->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="./assets/img/Seguna-prueba.jpg" alt="Slide 1" class="fotos">
+                <div class="container-texto-noticia-inicio ">
+                    <div class="contenido-texto-noticia">
+                        <p>Soria prepara el cierre de la Liga Nacional de Clubes de Duatlón con las competiciones
+                            Contrarreloj Equipos y Relevos</p>
+                    </div>
+                    <div class="categoria-noticia">
+                        <p>NACIONAL 7 de Junio 2024</p>
+                    </div>
+                    <div class="boton-noticia-inicio">
+                        <a href="#" class="button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./assets/img/Foto ancha.jpg" alt="Slide 2" class="fotos">
+                <div class="container-texto-noticia-inicio ">
+                    <div class="contenido-texto-noticia">
+                        <p>Ya están abiertas las inscripciones para el Ironman de Hawai 2025 que se celebrará el próximo
+                            20 de Mayo</p>
+                    </div>
+                    <div class="categoria-noticia">
+                        <p>INTERNACIONAL 4 de Junio de 2024</p>
+                    </div>
+                    <div class="boton-noticia-inicio">
+                        <a href="#" class="button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./assets/img/Foto ancha 2.jpg" alt="Slide 3" class="fotos">
+                <div class="container-texto-noticia-inicio ">
+                    <div class="contenido-texto-noticia">
+                        <p>La lista definitiva de los participantes del triatlón Olímpico de los próximos Juegos
+                            Olímpicos de Paris trae la creme de la creme del Triatlón </p>
+                    </div>
+                    <div class="categoria-noticia">
+                        <p>OLIMPIADAS 6 de Junio de 2024</p>
+                    </div>
+                    <div class="boton-noticia-inicio">
+                        <a href="#" class="button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="prevBtn" class="botones" onclick="plusSlides(-1)">&#10094;</button>
+        <button id="nextBtn" class="botones" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+
+    <!--SECCION ULTIMAS NOTICIAS-->
+    <div id="container-ultimas-noticias">
+        <section id="prueba-seccion">
+            <div id="texto-superior">
+
+                <h2>Ultimas noticias</h2>
+                <button id="boton-ver-todas">Ver todas</button>
+            </div>
+            <div id="contenido-noticia">
+                <div id="foto">
+                    <img src="./assets/img/Imagen-noticias.jpg" alt="" id="foto-noticia">
+                </div>
+                <div id="container-texto-ultima-noticia">
+                    <div id="titulo-de-la-noticia">
+                        <h3><a href="">Los Deportistas Andaluces marcan un gran comienzo de año a Nivel
+                                Internacional</a></h3>
+                    </div>
+                    <div id="relato-noticia">
+                        <p<>El año comienza con el oro de Alberto González en Hong Kong y el bronce de Cristina
+                            Jiménez-Orta en Quarteira.</p>
+                    </div>
+                    <div id="fecha-noticia">
+                        <p>26 de mayo 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr id="linea-separa-noticias">
+        <section id="container-noticias-pequeñas">
+
+            <article class="noticias-pequeñas">
+                <div class="contenido-noticias-pequeñas">
+                    <img src="./assets/img/Sergio Correa.jpg" alt="" class="imagenes-noticias-pequeñas">
+                    <div class="relato-noticias-pequeñas">
+                        <a href="">Sergio Correa se proclama campeón de España de Duatlón Cross a sus solo 26 años
+                            de edad</a>
+                    </div>
+                    <div class="fecha-noticias-pequeñas">18 de Abril de 2024</div>
+                </div>
+            </article>
+
+            <article class="noticias-pequeñas">
+                <div class="contenido-noticias-pequeñas">
+                    <img src="./assets/img/Almazan 2023.jpg" alt="" class="imagenes-noticias-pequeñas">
+                    <div class="relato-noticias-pequeñas">
+                        <a href="">El club Triatlón Rincón se proclama subcampeón de España de Triatlón Cross en
+                            Almazan</a>
+                    </div>
+                    <div class="fecha-noticias-pequeñas">11 de Abril de 2024</div>
+                </div>
+            </article>
+
+            <article class="noticias-pequeñas">
+                <div class="contenido-noticias-pequeñas">
+                    <img src="./assets/img/SwinRun.PNG" alt="" class="imagenes-noticias-pequeñas">
+                    <div class="relato-noticias-pequeñas">
+                        <a href=""> Clara Davies consigue el subcampeonato de España de SwinRun celebrado en la
+                            comunidad de Madrid</a>
+                    </div>
+                    <div class="fecha-noticias-pequeñas">12 de Abril de 2024</div>
+                </div>
+            </article>
+
+            <article class="noticias-pequeñas">
+                <div class="contenido-noticias-pequeñas">
+                    <img src="./assets/img/Campeonato Juvenil.PNG" alt="" class="imagenes-noticias-pequeñas">
+                    <div class="relato-noticias-pequeñas">
+                        <a href="">Irene Rubiales se alza con el título de Campeona de Andalucía de Duatlón Cros
+                            Juvenil el pasado domingo en Garrucha</a>
+                    </div>
+                    <div class="fecha-noticias-pequeñas">15 de Abril de 2024</div>
+                </div>
+            </article>
+
+        </section>
+    </div>
+
+
+    <!--APARTADO TIENDA-->
+    <div id="container-tienda">
+        <h2 id="titulo-tienda">Tienda</h2>
+        <div class="slider-tienda">
+            <div id="prueba-slider">
+                <div class="slide-tienda">
+                    <img src="./assets/img/TriTrajeEspaña.jpg" alt="Producto 1" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 1</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Bici-tienda.jpg" alt="Producto 2" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 2</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Zapatillas.jpg" alt="Producto 3" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 3</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Bañador.jpg" alt="Producto 4" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 4</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Calas Carretera.jpg" alt="Producto 5" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 5</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Casco.jpg" alt="Producto 6" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 6</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Vaporfly.png" alt="Producto 7" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 7</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Culott.jpg" alt="Producto 8" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 8</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="slide-tienda">
+                    <img src="./assets/img/Mono Ciclismo.jpg" alt="Producto 9" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 9</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer id="footerContainer">
+        <div id="margenes-footer">
+            <div id="contenedor-footer">
+                <!--NOTICIAS-->
+                <div class="articulos">
+                    <h3>Últimas noticias</h3>
+                    <div id="seccion-noticias">
+                        <article class="titulos-footer ">
+                            <header class="titulo-noticia"><a href=""> Cuenta atrás para la Gran Final de las Series
+                                    Mundiales
+                                </a></header>
+                            <p class="subtitulo-noticia">La Gran Final de las Series Mundiales 2024...
+                            </p>
+                            <footer class="final-noticia">01 Abril 2024</footer>
+                        </article>
+                        <article class="titulos-footer ">
+                            <header class="titulo-noticia"><a href="">Nuevo récord en Ironman: ¡Menos de 7 horas!</a>
+                            </header>
+                            <p class="subtitulo-noticia">Triatleta desconocido rompe récord mundial en la distancia
+                                Ironman
+                            </p>
+                            <footer class="final-noticia"></footer>
+                        </article>
+                        <article class="titulos-footer ">
+                            <header class="titulo-noticia"><a href="">Joven triatleta gana oro mundial junior</a>
+                            </header>
+                            <p class="subtitulo-noticia">Promesa juvenil del triatlón logra la medalla de oro en el
+                                campeonato
+                                mundial</p>
+                            <footer class="final-noticia"></footer>
+                        </article>
+                        <article class="titulos-footer">
+                            <header class="titulo-noticia"><a href="">Tecnología innovadora en trajes de neopreno</a>
+                            </header>
+                            <p class="subtitulo-noticia">Nuevo traje de neopreno promete cambiar el triatlón</p>
+                            <footer class="final-noticia"></footer>
+                        </article>
+                    </div>
+                    <a href="" class="enlaces-footer-final">noticias &rarr;</a>
+
+                    <!--RESULTADOS-->
+                </div>
+                <div class="articulos">
+                    <h3>Últimos resultados</h3>
+                    <ul id="lista-proximo-eventos">
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer-primero">
+                                <a href="">2024 E World Triathlon Championships London powered by Zwift</a>
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/gbr.svg" alt="" class="banderas">
+                                </div>
+                                <div class="lugar-evento-footer">
+                                    London, Great Britain
+                                </div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div><img src="./assets/img/pdf.png" alt=""></div>
+                                <div class="archivo-clasificaciones"><a href=""
+                                        class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div class="">
+                                    <div><img src="./assets/img/pdf.png" alt=""></div>
+                                    <div class="archivo-clasificaciones"><a href=""
+                                            class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">2024 Europe Triathlon Multisport Championships Coimbra</a>
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/prt.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Coimbra, Portugal
+                                </div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div><img src="./assets/img/pdf.png" alt=""></div>
+                                <div class="archivo-clasificaciones"><a href=""
+                                        class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div class="">
+                                    <div><img src="./assets/img/pdf.png" alt=""></div>
+                                    <div class="archivo-clasificaciones"><a href=""
+                                            class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">C2024 Europe Triathlon Cup Cork</a>
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/irl.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Cork, Ireland
+                                </div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div><img src="./assets/img/pdf.png" alt=""></div>
+                                <div class="archivo-clasificaciones"><a href=""
+                                        class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div class="">
+                                    <div><img src="./assets/img/pdf.png" alt=""></div>
+                                    <div class="archivo-clasificaciones"><a href=""
+                                            class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">2024 World Triathlon Championship Finals Torremolinos-Andalucia</a>
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Torremolinos, Spain
+                                </div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div class="">
+                                    <div><img src="./assets/img/pdf.png" alt=""></div>
+                                    <div class="archivo-clasificaciones"><a href=""
+                                            class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
+                                </div>
+                            </div>
+                            <div class="contenedor-archivo-resultados">
+                                <div class="">
+                                    <div><img src="./" alt=""></div>
+                                    <div class="archivo-clasificaciones"><a href=""
+                                            class="enlace-clasificaciones-footer">Clasificación Femeninia.pdf</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="enlaces-footer-final">resultados &rarr;</a>
+                </div>
+
+
+                <!--PROXIMAS COMPETICIONES-->
+                <div class="articulos">
+                    <h3>Próximos eventos</h3>
+                    <ul id="lista-proximo-eventos">
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer-primero">
+                                <a href="">2024 E World Triathlon Championships London powered by Zwift</a>
+                            </div>
+                            <div>
+                                06 JUN 2024
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/gbr.svg" alt="" class="banderas">
+                                </div>
+                                <div class="lugar-evento-footer">
+                                    London, Great Britain
+                                </div>
+                            </div>
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">2024 Europe Triathlon Multisport Championships Coimbra</a>
+                            </div>
+                            <div>
+                                06 JUN 2024
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/prt.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Coimbra, Portugal
+                                </div>
+                            </div>
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">C2024 Europe Triathlon Cup Cork</a>
+                            </div>
+                            <div>
+                                06 JUN 2024
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/irl.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Cork, Ireland
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="eventos-completos">
+                            <div class="titulo-evento-footer">
+                                <a href="">2024 World Triathlon Championship Finals Torremolinos-Andalucia</a>
+                            </div>
+                            <div>
+                                06 JUN 2024
+                            </div>
+                            <div class="lugar-pruebas-footer">
+                                <div>
+                                    <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="banderas">
+                                </div>
+                                <div>
+                                    Torremolinos, Spain
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="enlaces-footer-final">eventos &rarr;</a>
+                </div>
+
+
+                <!--MULTIMEDIA-->
+                <div class="articulos">
+                    <h3>Galeria reciente</h3>
+                    <ul id="lista-multimedia-footer">
+                        <li class="videos">
+                            <div class="div-video"><a
+                                    href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
+                                    src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
+                                    alt="" id="fotillo"></div>
+                            <div class="div-texto"><a
+                                    href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
+                                    class="espacio-a">2024 World Triathlon Indoor Cup Lievin: EXTENDED HIGHLIGHTS</a>
+                                <div> 01 Apr 2024</div>
+                            </div>
+                        </li>
+                        <li class="videos">
+                            <div class="div-video"><a
+                                    href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
+                                    src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
+                                    alt=""></div>
+                            <div class="div-texto"><a
+                                    href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
+                                    class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
+                                <div> 01 Apr 2024</div>
+                            </div>
+                        </li>
+                        <li class="videos">
+                            <div class="div-video"><a
+                                    href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
+                                    src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
+                                    alt=""></div>
+                            <div class="div-texto"><a
+                                    href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
+                                    class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
+                                <div> 01 Apr 2024</div>
+                            </div>
+                        </li>
+                        <li class="videos">
+                            <div class="div-video"><a
+                                    href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
+                                    src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
+                                    alt=""></div>
+                            <div class="div-texto"><a
+                                    href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
+                                    class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
+                                <div> 01 Apr 2024</div>
+                            </div>
+                        </li>
+                        <li class="videos">
+                            <div class="div-video"><a
+                                    href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
+                                    src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
+                                    alt=""></div>
+                            <div class="div-texto"><a
+                                    href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
+                                    class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
+                                <div> 01 Apr 2024</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--SITIO DE INTERES Y EMAIL-->
+                <div class="articulos">
+                    <div>
+                        <h3>Sitios de interes</h3>
+                    </div>
+                    <h3>Información relevante</h3>
+                    <ul id="lista-info">
+                        <li>Sobre nosotros</li>
+                        <li>Politca de privcidad</li>
+                        <li>Cookies</li>
+                        <li>Documentación</li>
+                    </ul>
+                    <h3>Enterate de todas nuestras noticias</h3>
+                    <div id="enviar-correo">
+                        <label for=""></label>
+                        <input type="email" placeholder="Introduce tu email" id="texto-email">
+                        <label for=""></label>
+                        <input type="submit" id="boton-enviar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="info-sobre-nosotros">
+        <div id="simbolo">
+            <div id="prueba-footer-abajo">
+                <a href="" class="enlaces-sin-color">&#169 TriVictory</a>
+            </div>
+        </div>
+        <div id="final-sobre-nosotros">
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color">Sobre nosotros</a> </div>
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color"> Terminos y condiciones</a></div>
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color">Cookies</a> </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const listaMenu = document.getElementById('lista-menu');
+
+            hamburgerMenu.addEventListener('click', function () {
+                listaMenu.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const perfilLi = document.getElementById('perfil');
+
+            perfilLi.addEventListener('mouseover', function () {
+                const usuario = document.getElementById('username-input').value;
+                alert('¡Bienvenido, ' + usuario + '!');
+            });
+        });
+
+
+        /*SLIEDER ARRIBA*/
+
+        const prevBtnSlider = document.getElementById('prevBtn');
+        const nextBtnSlider = document.getElementById('nextBtn');
+        const sliderSlider = document.querySelector('.slider');
+        const slidesSlider = document.querySelectorAll('.slide');
+
+        let counterSlider = 0;
+        const slideWidthSlider = slidesSlider[0].clientWidth;
+        const intervalTimeSlider = 5000; // Intervalo de tiempo en milisegundos (5 segundos)
+
+        let autoSlideIntervalSlider; // Variable para almacenar el intervalo del desplazamiento automático
+
+        // Función para avanzar el slider automáticamente cada 5 segundos
+        function startAutoSlideSlider() {
+            autoSlideIntervalSlider = setInterval(() => {
+                counterSlider++;
+                if (counterSlider === slidesSlider.length) {
+                    counterSlider = 0;
+                }
+                updateSlider();
+            }, intervalTimeSlider);
+        }
+
+        // Comenzar el desplazamiento automático cuando se carga la página
+        startAutoSlideSlider();
+
+        nextBtnSlider.addEventListener('click', () => {
+            clearInterval(autoSlideIntervalSlider); // Detener el desplazamiento automático al hacer clic en el botón siguiente
+            counterSlider++;
+            if (counterSlider === slidesSlider.length) {
+                counterSlider = 0;
+            }
+            updateSlider();
+            startAutoSlideSlider(); // Reiniciar el desplazamiento automático después de hacer clic en el botón siguiente
+        });
+
+        prevBtnSlider.addEventListener('click', () => {
+            clearInterval(autoSlideIntervalSlider); // Detener el desplazamiento automático al hacer clic en el botón anterior
+            counterSlider--;
+            if (counterSlider < 0) {
+                counterSlider = slidesSlider.length - 1;
+            }
+            updateSlider();
+            startAutoSlideSlider(); // Reiniciar el desplazamiento automático después de hacer clic en el botón anterior
+        });
+
+        function updateSlider() {
+            const offsetSlider = -counterSlider * slideWidthSlider;
+            sliderSlider.style.transform = `translateX(${offsetSlider}px)`;
+        }
+
+        /*SLIDER TIENDA*/
+        const prevBtnSliderTienda = document.querySelector('.prev');
+        const nextBtnSliderTienda = document.querySelector('.next');
+        const sliderSliderTienda = document.getElementById('prueba-slider');
+        const slidesSliderTienda = document.querySelectorAll('.slide-tienda');
+
+        let counterSliderTienda = 0;
+        const slideWidthSliderTienda = slidesSliderTienda[0].clientWidth; // Ancho de un solo slide
+        const slideVisibleCount = 3; // Número de slides visibles a la vez
+
+        // Porcentaje de avance deseado (ajustar según sea necesario)
+        const slideWidthPercentage = 106; // Porcentaje de avance
+
+        nextBtnSliderTienda.addEventListener('click', () => {
+            // Calculamos el avance en píxeles
+            const slideWidthIncrement = slideWidthSliderTienda * (slideWidthPercentage / 100);
+            counterSliderTienda += slideVisibleCount;
+            if (counterSliderTienda >= slidesSliderTienda.length) {
+                counterSliderTienda = 0;
+            }
+            updateSliderTienda(slideWidthIncrement);
+            sliderSliderTienda.classList.add('slide-animation'); // Agregar clase de animación al contenedor del slider
+        });
+
+        prevBtnSliderTienda.addEventListener('click', () => {
+            // Calculamos el avance en píxeles
+            const slideWidthIncrement = slideWidthSliderTienda * (slideWidthPercentage / 100);
+            counterSliderTienda -= slideVisibleCount;
+            if (counterSliderTienda < 0) {
+                counterSliderTienda = slidesSliderTienda.length - slideVisibleCount;
+            }
+            updateSliderTienda(slideWidthIncrement);
+            sliderSliderTienda.classList.add('slide-animation'); // Agregar clase de animación al contenedor del slider
+        });
+
+        // Agregar un listener de evento 'transitionend' para eliminar la clase de animación después de que la animación haya terminado
+        sliderSliderTienda.addEventListener('transitionend', () => {
+            sliderSliderTienda.classList.remove('slide-animation');
+        });
+
+        function updateSliderTienda(slideWidthIncrement) {
+            const offsetSliderTienda = -counterSliderTienda * slideWidthIncrement;
+            sliderSliderTienda.style.transform = `translateX(${offsetSliderTienda}px)`;
+        }
+
+
+    </script>
+</body>
+
+</html>

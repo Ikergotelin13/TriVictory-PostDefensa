@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: Clara Davies consigue el subcampeonato de España de SwimRun celebrado en la Comunidad de Madrid</title>
+    <link rel="stylesheet" href="../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">Clara Davies consigue el subcampeonato de España de SwimRun celebrado en la Comunidad de Madrid</h1>
+        <h2 class="noticia-subtitulo">Una destacada actuación en una de las competencias más exigentes del país</h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 21 de mayo de 2024</p>
+        <img src="../../assets/img/Clara.jpg" alt="SwimRun en la Comunidad de Madrid" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>Clara Davies ha logrado un impresionante subcampeonato en el reciente Campeonato de España de SwimRun celebrado en la Comunidad de Madrid. Esta competición, conocida por su dureza y su exigente recorrido, ha reunido a los mejores atletas del país en una prueba que combina tramos de natación y carrera a pie en un entorno natural.</p>
+
+            <h3>Una Competencia Intensa</h3>
+            <p>El evento tuvo lugar en los parajes naturales de la Comunidad de Madrid, proporcionando un escenario perfecto para el SwimRun. Los participantes enfrentaron un desafiante recorrido que alternaba segmentos de natación en aguas abiertas con tramos de carrera a pie por senderos y terrenos variados.</p>
+
+            <p>Clara Davies se destacó desde el inicio de la competencia, manteniendo un ritmo constante y demostrando una gran habilidad tanto en el agua como en tierra. Su determinación y preparación la llevaron a cruzar la línea de meta en segundo lugar, asegurando así el subcampeonato.</p>
+
+            <h3>Destrezas y Estrategia</h3>
+            <p>La clave del éxito de Davies en esta competencia fue su habilidad para adaptarse rápidamente a los cambios de disciplina. Su técnica de natación fue impecable, lo que le permitió ganar tiempo valioso en los tramos acuáticos, mientras que su resistencia y velocidad en la carrera le ayudaron a mantener su posición en los segmentos de tierra.</p>
+
+            <p>Davies comentó sobre su experiencia tras la carrera: "Ha sido una competencia muy dura, pero estoy muy contenta con el resultado. La preparación ha sido intensa, y estoy agradecida por el apoyo de mi equipo y mi familia. Este subcampeonato es un gran logro para mí y un paso importante en mi carrera deportiva."</p>
+
+            <h3>Preparación y Apoyo</h3>
+            <p>La preparación para esta competencia fue rigurosa. Clara Davies y su equipo trabajaron durante meses para optimizar su rendimiento en ambas disciplinas. Los entrenamientos incluyeron sesiones específicas de natación en aguas abiertas y carreras en terrenos variados para simular las condiciones de la competencia.</p>
+
+            <p>El apoyo de su equipo técnico y su familia fue fundamental para alcanzar este éxito. "Sin el respaldo de mi equipo y el ánimo de mis seres queridos, esto no habría sido posible. Este logro es compartido con todos ellos", añadió Davies.</p>
+
+            <h3>Mirando Hacia el Futuro</h3>
+            <p>Con este subcampeonato, Clara Davies reafirma su posición como una de las mejores atletas de SwimRun en España. Su mirada ya está puesta en futuros desafíos y competiciones, con la intención de seguir mejorando y alcanzar nuevos éxitos.</p>
+
+            <p>La comunidad del SwimRun y los aficionados al deporte han celebrado este logro, reconociendo el talento y la dedicación de Davies. Este subcampeonato es solo el comienzo de lo que promete ser una carrera llena de éxitos para la joven atleta.</p>
+
+            <h3>Reacciones y Felicitaciones</h3>
+            <p>Las redes sociales y los medios de comunicación han estado llenos de mensajes de felicitación para Clara Davies. Las autoridades deportivas y los aficionados han expresado su orgullo y han destacado la importancia de este logro para el deporte nacional.</p>
+
+            <p>El presidente de la Federación Española de SwimRun, Juan Pérez, declaró: "Clara Davies ha demostrado una vez más su talento y su dedicación. Este subcampeonato es un reflejo de su esfuerzo y su compromiso con el deporte. Estamos muy orgullosos de ella y seguros de que vendrán muchos más éxitos en el futuro."</p>
+        </div>
+
+        <p class="noticia-referencia">Referencia: Federación Española de SwimRun.</p>
+    </div>
+
+    <div id="contenedor-parte-abajo-noticia">
+        <a href="./noticias.html"><p id="enlace-volver">← Volver</p></a>
+        <a href="./Triatlon-Sevilla.html"><p id="enlace-noticia">Siguiente noticia →</p></a>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="headerContainer">
+        <div id="cabecera">
+            <a href="../../index-registrado-usuario.html"><img src="../../assets/img/trivictory -02.png" alt=""
+                    id="logo"></a>
+            <ul id="lista-redes">
+                <li><a href="https://www.facebook.com/?locale=es_ES"><img src="../../assets/img/facebook.png"
+                            alt=""></a></li>
+                <li><a href="https://www.instagram.com"><img src="../../assets/img/instagram.png" alt=""></a></li>
+                <li><a href="https://twitter.com/home?lang=es"><img src="../../assets/img/x.png"></a></li>
+                <li><img src="../../assets/img/perfil.png" alt=""></li>
+                <li><a href="../../index.html"><button id="boton-cerrar-sesion">Cerrar sesion</button></a></li>
+            </ul>
+        </div>
+        <nav id="navegacion" class="animacion-navegacion">
+            <div id="contenedor-menu" class="animacion-menu">
+                <button id="hamburger-menu" class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul id="lista-menu" class="animacion-lista">
+                    <li id="lista-eventos" class="nombre-secciones-menu animacion-secciones">
+                        <a href="../usuario/eventos.php" class="enlaces-header">Eventos</a>
+                    </li>
+                    <li class="nombre-secciones-menu">
+                        <a href="../usuario/noticias/noticias.html" class="enlaces-header">Noticias</a>
+                    </li>
+                    <li id="lista-multimedia" class="nombre-secciones-menu">
+                        <a href="../usuario/multimedia/multimedia.html" class="enlaces-header">Galeria</a>
+                    </li>
+                    <li class="nombre-secciones-menu">
+                        <a href="../usuario/tienda/tienda.html" class="enlaces-header">Tienda</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.getElementById('hamburger-menu');
+                const listaMenu = document.getElementById('lista-menu');
+
+                hamburgerMenu.addEventListener('click', function () {
+                    listaMenu.classList.toggle('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

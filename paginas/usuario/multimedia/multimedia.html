@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Triatlón</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="loader hidden" id="loader"></div>
+    <div id="principal">
+        <p id="oo">Galeria</p>
+    </div>
+    <main>
+        <div class="gallery-item" id="gallery-item1">
+
+            <div class="gallery-item-text">
+                <p class="titulo-nombre-galeria">Campeonato de España de Duatlón Cros 2023</p>
+                <div class="info-lugar-galeria">
+                    <div>
+                        <img src="../../../assets/img/galeria-de-imagenes.png" alt="" class="icono-galeria">
+                    </div>
+                    <div>
+                        <p class="texto-lugar-galeria">20 de Junio 2023</p>
+                    </div>
+                    <div>
+                        <p class="texto-lugar-galeria">Almazan,Soria</p>
+                    </div>
+                    <div>
+                        <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="bandera-lugar">
+                    </div>
+                </div>
+
+
+                <a href="../multimedia/galeria.html">Ver galería</a>
+            </div>
+            <div id="image-container">
+                <img src="../../../assets/img/Prueba.png" alt="Imagen 1" class="foto-galeria">
+            </div>
+        </div>
+
+
+
+        <div class="gallery-item" id="gallery-item1">
+
+            <div class="gallery-item-text">
+                <p class="titulo-nombre-galeria">Campeonato de España de Duatlón Cros 2023</p>
+                <div class="info-lugar-galeria">
+                    <div>
+                        <img src="../../../assets/img/galeria-de-imagenes.png" alt="" class="icono-galeria">
+                    </div>
+                    <div>
+                        <p class="texto-lugar-galeria">20 de Junio 2023</p>
+                    </div>
+                    <div>
+                        <p class="texto-lugar-galeria">Almazan,Soria</p>
+                    </div>
+                    <div>
+                        <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="bandera-lugar">
+                    </div>
+                </div>
+
+
+                <a href="../multimedia/galeria2.html">Ver galería</a>
+            </div>
+            <div id="image-container">
+                <img src="../../../assets/img/Galeria2.jpg" alt="Imagen 1" class="foto-galeria">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer">© 2024 Galería de Triatlón</div>
+    </footer>
+
+
+    <script>
+
+        /*MENU DESPLEGABLE */
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const listaMenu = document.getElementById('lista-menu');
+
+            hamburgerMenu.addEventListener('click', function () {
+                listaMenu.classList.toggle('active');
+            });
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById('lista-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+            const loader = document.getElementById('loader'); // Obtener el loader
+
+            // Mostrar el loader mientras se cargan los elementos
+            loader.classList.remove('hidden');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-Multimedia.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                    loader.classList.add('hidden'); // Ocultar el loader después de cargar el pie de página
+                });
+        });
+    </script>
+</body>
+
+</html>

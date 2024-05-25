@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Producto</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+</head>
+
+<body>
+    <div class="loader" id="loader"></div>
+    <header id="header"></header>
+    <div class="container-vista-producto">
+        <div class="product-image zoom-container">
+            <img id="mainImage" src="../../../assets/img/Mono España Principal.jpg" alt="Producto principal">
+            <div class="zoom-lens" id="zoomLens"></div>
+            <div class="zoom-result" id="zoomResult"></div>
+            <div class="thumbnail-images">
+                <img src="../../../assets/img/Mono España Principal.jpg" alt="Miniatura 1">
+                <img src="../../../assets/img/Mono España miniatura.jpg" alt="Miniatura 2">
+                <img src="../../../assets/img/Mono España miniatura 2.jpg" alt="Miniatura 3">
+                <img src="../../../assets/img/TriTraje España.jpg" alt="Miniatura 4">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>TRITRAJE PRO 2.0 - GGEE PATROCINADO - NEGRO</h1>
+            <p class="price">90,00 € <span class="discount">120,00 €</span> <span class="discount-tag">25% OFF</span>
+            </p>
+            <div class="personalization">
+                <h2>Personalización del producto</h2>
+                <p id="texto-personalizacion">No olvide guardar su personalización para poder añadirla al carrito. En caso de no llevarla indicar
+                    "Sin Nombre" o "Sin Número".</p>
+                <form action="">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <label for="logoA2">Logo A2</label>
+                    <input type="file" id="logoA2" name="logoA2">
+                    <label for="logoA3">Logo A3</label>
+                    <input type="file" id="logoA3" name="logoA3">
+                    <button type="submit">Guardar Personalización</button>
+                </form>
+            </div>
+            <div class="size-selection">
+                <label for="talla">Talla</label>
+                <select id="talla" name="talla">
+                    <option value="">Selecciona una talla</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <!-- Add more options here -->
+                </select>
+                <button type="button">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer-tienda">
+        <p class="footer-text">&copy; 2024 Tienda de Triatlón. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerContainer = document.getElementById('header');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-tienda.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // JavaScript para cambiar la imagen principal al hacer clic en una miniatura
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-images img');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    mainImage.src = thumbnail.src;
+                });
+            });
+
+            // JavaScript para el zoom
+            const zoomLens = document.getElementById('zoomLens');
+            const zoomResult = document.getElementById('zoomResult');
+            const img = document.getElementById('mainImage');
+
+            img.addEventListener('mousemove', moveLens);
+            img.addEventListener('mouseenter', () => {
+                zoomLens.style.display = 'block';
+                zoomResult.style.display = 'block';
+            });
+            img.addEventListener('mouseleave', () => {
+                zoomLens.style.display = 'none';
+                zoomResult.style.display = 'none';
+            });
+
+            function moveLens(e) {
+                const pos = getCursorPos(e);
+                let x = pos.x - (zoomLens.offsetWidth / 2);
+                let y = pos.y - (zoomLens.offsetHeight / 2);
+
+                if (x > img.width - zoomLens.offsetWidth) { x = img.width - zoomLens.offsetWidth; }
+                if (x < 0) { x = 0; }
+                if (y > img.height - zoomLens.offsetHeight) { y = img.height - zoomLens.offsetHeight; }
+                if (y < 0) { y = 0; }
+
+                zoomLens.style.left = x + 'px';
+                zoomLens.style.top = y + 'px';
+
+                zoomResult.style.backgroundImage = `url('${img.src}')`;
+                zoomResult.style.backgroundSize = `${img.width * 2}px ${img.height * 2}px`;
+                zoomResult.style.backgroundPosition = `-${x * 2}px -${y * 2}px`;
+            }
+
+            function getCursorPos(e) {
+                const rect = img.getBoundingClientRect();
+                const x = e.pageX - rect.left - window.pageXOffset;
+                const y = e.pageY - rect.top - window.pageYOffset;
+                return { x, y };
+            }
+        });
+        // Simulación de carga
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>

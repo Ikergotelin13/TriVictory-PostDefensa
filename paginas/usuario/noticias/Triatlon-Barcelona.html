@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: Triatlón Internacional de Barcelona 2024: Resumen de Momentos Destacados y Resultados</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">Tríatlon Internacional de Barcelona 2024: Resumen de Momentos Destacados y Resultados
+        </h1>
+        <h2 class="noticia-subtitulo">Una competencia emocionante con actuaciones brillantes en todas las disciplinas
+        </h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 20 de mayo de 2024</p>
+        <img src="../../../assets/img/Triatlon Barcelon.jpg" alt="Triatlón en Barcelona" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>El pasado fin de semana, la ciudad de Barcelona fue el escenario del Triatlón Internacional de 2024, un
+                evento que reunió a los mejores triatletas del mundo para competir en un desafiante circuito que incluía
+                natación, ciclismo y carrera a pie. La competencia, caracterizada por un alto nivel de participación y
+                emoción, dejó momentos memorables y resultados impresionantes.</p>
+
+            <h3>Momentos Destacados</h3>
+            <p>La jornada comenzó con la prueba de natación, donde el francés Pierre Leclerc se destacó con un ritmo
+                impresionante, liderando la carrera desde el inicio. Su técnica y velocidad en el agua lo colocaron en
+                una posición ventajosa para las siguientes etapas.</p>
+
+            <p>El segmento de ciclismo fue igualmente emocionante, con el español Javier Gómez Noya realizando una
+                actuación sobresaliente. Gómez Noya, conocido por su fuerza y estrategia, tomó la delantera en las
+                empinadas colinas de Barcelona, manteniendo un ritmo constante y aprovechando cada oportunidad para
+                distanciarse de sus competidores.</p>
+
+            <p>La etapa final de carrera a pie fue el clímax de la competencia. La británica Lucy Charles-Barclay, que
+                había mantenido un desempeño sólido en las etapas anteriores, mostró su increíble resistencia y
+                velocidad, superando a sus rivales en los últimos kilómetros y asegurando una victoria contundente en la
+                categoría femenina.</p>
+
+            <h3>Resultados</h3>
+            <p>En la categoría masculina, Pierre Leclerc se llevó el primer lugar, seguido de cerca por Javier Gómez
+                Noya, quien terminó en segundo lugar, y el australiano Jacob Birtwhistle, que completó el podio en
+                tercera posición. En la categoría femenina, Lucy Charles-Barclay se proclamó campeona, seguida por la
+                estadounidense Katie Zaferes en segundo lugar y la alemana Laura Lindemann en tercer lugar.</p>
+
+            <h3>Reacciones y Opiniones</h3>
+            <p>Los participantes y espectadores elogiaron la organización del evento y el apoyo del público barcelonés.
+                "Ha sido una carrera increíble con una atmósfera fantástica. El apoyo de la gente en las calles
+                realmente nos dio energía para seguir adelante", comentó Lucy Charles-Barclay tras su victoria.</p>
+
+            <p>Javier Gómez Noya, por su parte, expresó su satisfacción con su desempeño: "Estoy muy contento con mi
+                actuación hoy. El circuito fue muy desafiante, pero eso es lo que hace que este deporte sea tan
+                emocionante."</p>
+
+            <h3>Mirando Hacia el Futuro</h3>
+            <p>Con el Triatlón Internacional de Barcelona concluyendo con tanto éxito, los triatletas ahora se preparan
+                para sus próximos desafíos. Este evento ha dejado claro que el nivel de competencia en el triatlón sigue
+                siendo extremadamente alto y que los atletas están constantemente elevando sus estándares.</p>
+
+            <p>La comunidad del triatlón espera con ansias los próximos eventos de la temporada, donde se anticipa ver
+                más actuaciones impresionantes y momentos inolvidables en el deporte.</p>
+
+            <h3>Agradecimientos y Cierre</h3>
+            <p>La organización del Triatlón Internacional de Barcelona agradece a todos los atletas, voluntarios y
+                patrocinadores por hacer de este evento un éxito rotundo. Sin duda, este triatlón se ha consolidado como
+                uno de los eventos más importantes del calendario deportivo internacional.</p>
+        </div>
+
+        <p class="noticia-referencia">Referencia: Federación Catalana de Triatlón.</p>
+    </div>
+
+    <div id="contenedor-parte-abajo-noticia">
+        <a href="./noticias.html">
+            <p id="enlace-volver">← Volver</p>
+        </a>
+        <a href="./Campeonato-SwinRun.html">
+            <p id="enlace-noticia">Siguiente noticia →</p>
+        </a>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>

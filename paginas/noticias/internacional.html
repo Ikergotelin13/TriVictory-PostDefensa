@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: Éxito en el Triatlón Internacional de Sevilla</title>
+    <link rel="stylesheet" href="../../assets/css/estilo.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">
+            Los Deportistas Andaluces marcan un gran comienzo de año a Nivel Internacionals</h1>
+        <h2 class="noticia-subtitulo">Participantes de todo el mundo destacan en una jornada de competición y
+            camaradería</h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 9 de junio de 2024</p>
+        <img src="../../assets/img/Gonzalez.jpg" alt="Triatlón en Sevilla" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>El inicio de 2024 ha sido brillante para los deportistas andaluces en el ámbito internacional. Alberto
+                González y Cristina Jiménez-Orta han logrado destacarse en competencias de alta exigencia, dejando en
+                alto el nombre de Andalucía en el escenario deportivo global.</p>
+
+            <h3>Triunfo Dorado en Hong Kong</h3>
+            <p>Alberto González, natural de Málaga, se llevó la medalla de oro en el Triatlón Internacional de Hong
+                Kong, una de las competiciones más prestigiosas del circuito asiático. El evento, que tuvo lugar el
+                pasado 15 de enero, reunió a los mejores triatletas del mundo, quienes enfrentaron un recorrido
+                desafiante compuesto por 1.5 km de natación, 40 km de ciclismo y 10 km de carrera a pie.</p>
+
+            <p>González, con una impresionante demostración de fuerza y resistencia, completó la prueba en 1 hora, 48
+                minutos y 23 segundos, superando al segundo lugar por más de un minuto. "Este triunfo es el resultado de
+                años de duro trabajo y dedicación. Estoy muy orgulloso de representar a mi país y llevar esta medalla de
+                oro a casa", declaró emocionado tras cruzar la meta.</p>
+
+            <h3>Bronce Brillante en Quarteira</h3>
+            <p>Por su parte, Cristina Jiménez-Orta, oriunda de Sevilla, conquistó la medalla de bronce en la Copa
+                Europea de Triatlón celebrada en Quarteira, Portugal, el 22 de febrero. En una competencia que exigió lo
+                mejor de los atletas, Cristina demostró su capacidad para mantenerse entre las mejores, logrando un
+                tiempo de 2 horas, 5 minutos y 37 segundos.</p>
+
+            <p>La triatleta sevillana se mostró satisfecha con su desempeño y destacó la importancia de este logro para
+                su carrera. "Este bronce significa mucho para mí. Ha sido un camino difícil, pero con el apoyo de mi
+                equipo y mi familia, he podido llegar hasta aquí. Este es solo el comienzo de lo que espero sea un año
+                lleno de éxitos", comentó Jiménez-Orta.</p>
+
+            <h3>Proyección Futura</h3>
+            <p>Estos éxitos marcan un comienzo prometedor para los deportistas andaluces en 2024, quienes no solo buscan
+                destacar en el ámbito internacional, sino también inspirar a las nuevas generaciones de atletas en su
+                región. Tanto Alberto González como Cristina Jiménez-Orta están enfocados en sus próximos desafíos,
+                incluyendo la preparación para los Juegos Olímpicos de París 2024, donde esperan continuar con su racha
+                de éxitos.</p>
+
+            <p>La comunidad deportiva de Andalucía celebra estos logros y se prepara para apoyar a sus atletas en los
+                futuros eventos. Los éxitos de González y Jiménez-Orta son un testimonio del talento y la dedicación de
+                los deportistas de la región, quienes continúan dejando una huella indeleble en el deporte
+                internacional.</p>
+
+            <h3>Reacciones y Apoyo</h3>
+            <p>Las autoridades deportivas y locales de Andalucía no tardaron en expresar su orgullo y felicitaciones. La
+                Consejería de Deportes emitió un comunicado destacando la importancia de estos logros para la región y
+                reafirmando su compromiso de seguir apoyando el desarrollo de los atletas andaluces.</p>
+
+            <p>Además, ambos deportistas recibieron numerosas muestras de cariño y felicitaciones a través de las redes
+                sociales. Sus seguidores y compañeros de equipo no escatimaron en elogios, resaltando la perseverancia y
+                el esfuerzo que han llevado a estos destacados resultados.</p>
+
+            <p>Con un comienzo de año tan espectacular, las expectativas para el resto de 2024 son altas. Los
+                deportistas andaluces han demostrado que tienen el talento y la determinación necesarios para competir
+                al más alto nivel y seguirán trabajando arduamente para alcanzar nuevas metas y continuar llevando el
+                nombre de Andalucía a lo más alto del deporte mundial.</p>
+        </div>
+
+        <p class="noticia-referencia">Referencia: World Triatlon News.</p>
+
+    </div>
+
+    <div id="contenedor-parte-abajo-noticia">
+      <a href="./noticias.html"><p id="enlace-volver">← Volver</p></a>
+        <a href="./Triatlon-Sevilla.html" ><p id="enlace-noticia">Siguiente noticia →</p></a>
+    </div>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

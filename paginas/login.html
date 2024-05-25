@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/estilo.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <a href="../index.html" ><img src="../assets/img/trivictory -02.png" alt="" id="logo-chico"></a>
+    </header>
+    <main>
+        <div class="loader" id="loader"></div>
+        <div class="container" id="login-container">
+            <h2>Iniciar sesión</h2>
+            <form action="../assets/php/controlar-login.php" method="post" id="login-form">
+                <input type="text" name="usuario" placeholder="Usuario" required class="login-input" id="username-input">
+                <input type="password" name="contraseña" placeholder="Contraseña" required class="login-input" id="password-input">
+                <input type="submit" value="Iniciar sesión" class="login-button" id="login-button">
+            </form>
+            <p>¿No tienes una cuenta? <a href="../paginas/registro.html" id="signup-link">Regístrate aquí</a></p>
+        </div>
+
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </main>
+
+    <script src="../../assets/js/script.js"></script>
+    <script>
+        // Mostrar loader al cargar la página
+        window.addEventListener("load", function() {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const perfilLi = document.getElementById('perfil');
+
+            perfilLi.addEventListener('mouseover', function () {
+                const usuario = document.getElementById('username-input').value;
+                alert('¡Bienvenido, ' + usuario + '!');
+            });
+        });
+    </script>
+</body>
+</html>

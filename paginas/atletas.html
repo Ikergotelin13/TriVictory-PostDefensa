@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas</title>
+</head>
+<body>
+    <header id="header"></header>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+  const headerContainer = document.getElementById('header');
+  const footerContainer = document.getElementById('footer');
+
+  // Obtener la ruta relativa al directorio actual
+  const currentPagePath = window.location.pathname;
+  const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+  // Cargar el encabezado
+  fetch(currentPageDirectory + '/header.html')
+      .then(response => response.text())
+      .then(data => {
+          headerContainer.innerHTML = data;
+      });
+
+  // Cargar el pie de página
+  fetch(currentPageDirectory + '/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          footerContainer.innerHTML = data;
+      });
+});
+    </script>
+</body>
+</html>

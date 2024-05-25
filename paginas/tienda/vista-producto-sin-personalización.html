@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Producto</title>
+    <link rel="stylesheet" href="../../assets/css/estilo.css">
+</head>
+
+<body>
+    <div class="loader" id="loader"></div>
+    <header id="header"></header>
+    <div class="container-vista-producto">
+        <div class="product-image-2 zoom-container">
+            <img id="mainImage" src="../../assets/img/Trek.jpg" alt="Producto principal">
+            <div class="zoom-lens" id="zoomLens"></div>
+            <div class="zoom-result" id="zoomResult"></div>
+            <div class="thumbnail-images">
+                <img src="../../assets/img/Trek.jpg" alt="Miniatura 1">
+                <img src="../../assets/img/Trek 2.jpg" alt="Miniatura 2">
+                <img src="../../assets/img/Trek 3.jpg" alt="Miniatura 3">
+                <img src="../../assets/img/Trek 4.jpg" alt="Miniatura 4">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>Bicicleta carretera Trek, modelo 2024 Emonda SLR 6.</h1>
+            <p class="price">2000 € <span class="discount">2500,00 €</span> <span class="discount-tag">25% OFF</span>
+            </p>
+            <div class="personalization">
+                <h1>Tabla de tallas</h1>
+                <button id="openModalBtn">Abrir Modal</button>
+                <div id="myModal" class="modal-talla">
+                    <div class="modal-content-talla">
+                        <span class="close">&times;</span>
+                        <p>Tallaje de caballero</p>
+                        <img src="../../assets/img/Tallas.png" alt="Tabla de Tallas" id="Tabla-tallas">
+                    </div>
+                </div>
+            </div>
+            <div class="size-selection">
+                <label for="talla">Talla</label>
+                <select id="talla" name="talla">
+                    <option value="">Selecciona una talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XL">XXL</option>
+                    <!-- Add more options here -->
+                </select>
+                <button type="button">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-tienda.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+
+            // JavaScript para cambiar la imagen principal al hacer clic en una miniatura
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-images img');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    mainImage.src = thumbnail.src;
+                });
+            });
+
+            // JavaScript para el zoom
+            const zoomLens = document.getElementById('zoomLens');
+            const zoomResult = document.getElementById('zoomResult');
+            const img = document.getElementById('mainImage');
+
+            img.addEventListener('mousemove', moveLens);
+            img.addEventListener('mouseenter', () => {
+                zoomLens.style.display = 'block';
+                zoomResult.style.display = 'block';
+            });
+            img.addEventListener('mouseleave', () => {
+                zoomLens.style.display = 'none';
+                zoomResult.style.display = 'none';
+            });
+
+            function moveLens(e) {
+                const pos = getCursorPos(e);
+                let x = pos.x - (zoomLens.offsetWidth / 2);
+                let y = pos.y - (zoomLens.offsetHeight / 2);
+
+                if (x > img.width - zoomLens.offsetWidth) { x = img.width - zoomLens.offsetWidth; }
+                if (x < 0) { x = 0; }
+                if (y > img.height - zoomLens.offsetHeight) { y = img.height - zoomLens.offsetHeight; }
+                if (y < 0) { y = 0; }
+
+                zoomLens.style.left = x + 'px';
+                zoomLens.style.top = y + 'px';
+
+                zoomResult.style.backgroundImage = `url('${img.src}')`;
+                zoomResult.style.backgroundSize = `${img.width * 2}px ${img.height * 2}px`;
+                zoomResult.style.backgroundPosition = `-${x * 2}px -${y * 2}px`;
+            }
+
+            function getCursorPos(e) {
+                const rect = img.getBoundingClientRect();
+                const x = e.pageX - rect.left - window.pageXOffset;
+                const y = e.pageY - rect.top - window.pageYOffset;
+                return { x, y };
+            }
+        });
+        // Simulación de carga
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        });
+
+
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
+
+        // Obtener el botón que abre el modal
+        var btn = document.getElementById("openModalBtn");
+
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario haga clic en el botón, abrir el modal y deshabilitar el scroll
+        btn.onclick = function () {
+            modal.style.display = "block";
+            document.body.classList.add("no-scroll");
+        }
+
+        // Cuando el usuario haga clic en <span> (x), cerrar el modal y habilitar el scroll
+        span.onclick = function () {
+            modal.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+
+        // Cuando el usuario haga clic en cualquier lugar fuera del modal, cerrarlo y habilitar el scroll
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.classList.remove("no-scroll");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: Inscripciones Abiertas para el Ironman de Hawái 2025</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">Inscripciones Abiertas para el Ironman de Hawái 2025</h1>
+        <h2 class="noticia-subtitulo">El evento se celebrará el próximo 20 de mayo en Kona, Hawái</h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 21 de mayo de 2024</p>
+        <img src="../../../assets/img/Ironman.jpg" alt="Ironman de Hawái" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>Las inscripciones para el prestigioso Ironman de Hawái 2025 ya están abiertas. Este evento, que tendrá lugar el 20 de mayo en Kona, Hawái, es uno de los más esperados del calendario de triatlón, atrayendo a competidores de élite de todo el mundo.</p>
+
+            <h3>Un Desafío Épico</h3>
+            <p>El Ironman de Hawái es conocido por su dureza y su belleza escénica. Los participantes deberán completar un recorrido que incluye 3.8 km de natación en las aguas cristalinas del océano Pacífico, 180 km de ciclismo a través de paisajes volcánicos, y una maratón de 42.2 km en las condiciones calurosas y húmedas de Hawái.</p>
+
+            <p>Este evento no solo pone a prueba la resistencia física y mental de los atletas, sino que también celebra el espíritu de camaradería y la pasión por el triatlón. Los organizadores han prometido una experiencia inolvidable, con mejoras en las instalaciones y el apoyo logístico para los competidores.</p>
+
+            <h3>Cómo Inscribirse</h3>
+            <p>Los atletas interesados en participar pueden inscribirse a través del sitio web oficial del Ironman de Hawái. Se recomienda registrarse lo antes posible debido a la alta demanda y al límite de participantes. La inscripción incluye acceso a todas las áreas del evento, servicios médicos, y una medalla conmemorativa para quienes completen la prueba.</p>
+
+            <p>Para más detalles sobre los requisitos de inscripción, reglamentos y consejos de preparación, los interesados pueden visitar la página oficial del evento. Los organizadores también han habilitado una línea de atención al participante para resolver cualquier duda relacionada con el proceso de inscripción.</p>
+
+            <h3>Expectativas y Preparativos</h3>
+            <p>El Ironman de Hawái 2025 promete ser una edición memorable, con la participación de algunos de los mejores triatletas del mundo y la inclusión de nuevas categorías para fomentar la participación de atletas de todas las edades y niveles. Los preparativos están en marcha para asegurar que el evento se desarrolle de manera segura y eficiente, siguiendo todas las normativas de salud y seguridad.</p>
+
+            <p>Los atletas que ya han confirmado su participación incluyen a campeones anteriores y nuevas promesas del triatlón, lo que garantiza una competencia emocionante y de alto nivel. Las autoridades locales y los organizadores están trabajando en conjunto para ofrecer un evento espectacular que no solo destacará el talento deportivo, sino también la belleza natural y la hospitalidad de Hawái.</p>
+
+            <h3>Reacciones y Expectativas</h3>
+            <p>La apertura de las inscripciones ha generado una gran expectativa entre la comunidad de triatletas y aficionados al deporte. Muchos ya están planificando sus entrenamientos y estrategias para enfrentar este desafío. Las redes sociales se han llenado de mensajes de entusiasmo y apoyo, demostrando el impacto y la importancia de este evento en el mundo del triatlón.</p>
+
+            <p>El Ironman de Hawái es una cita imperdible para cualquier aficionado al triatlón, y la edición de 2025 promete ser una de las mejores hasta la fecha. Con una organización impecable y un entorno natural incomparable, este evento seguirá siendo un referente en el calendario deportivo internacional.</p>
+        </div>
+
+        <p class="noticia-referencia">Referencia: Ironman Official Website.</p>
+    </div>
+
+    <div id="contenedor-parte-abajo-noticia">
+        <a href="./noticias.html"><p id="enlace-volver">← Volver</p></a>
+        <a href="./Triatlon-Sevilla.html"><p id="enlace-noticia">Siguiente noticia →</p></a>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

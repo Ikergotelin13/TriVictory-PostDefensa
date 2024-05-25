@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: El club Triatlón Rincón se proclama subcampeón de España de Triatlón Cross en Almazán</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">El club Triatlón Rincón se proclama subcampeón de España de Triatlón Cross en Almazán</h1>
+        <h2 class="noticia-subtitulo">Un gran logro para el equipo que ha demostrado su valía en una competición intensa y desafiante</h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 21 de mayo de 2024</p>
+        <img src="../../../assets/img/Rincon.jpg" alt="Triatlón Cross en Almazán" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>El club Triatlón Rincón ha alcanzado un hito significativo al proclamarse subcampeón de España de Triatlón Cross en la competencia celebrada en Almazán. Este logro destaca el arduo trabajo y la dedicación del equipo, que ha sabido enfrentarse a una de las pruebas más exigentes del circuito nacional.</p>
+
+            <h3>Un Evento de Alto Nivel</h3>
+            <p>La competición tuvo lugar en Almazán, una localidad conocida por su terreno variado y desafiante, ideal para el triatlón cross. Los participantes tuvieron que superar un recorrido que incluyó natación en aguas abiertas, ciclismo de montaña y una carrera a pie por senderos naturales.</p>
+
+            <p>El club Triatlón Rincón se destacó desde el inicio, con un rendimiento sólido en todas las etapas de la competencia. La cohesión y el espíritu de equipo fueron fundamentales para alcanzar este resultado, demostrando que la preparación y la estrategia son clave en el éxito deportivo.</p>
+
+            <h3>Destacadas Actuaciones Individuales</h3>
+            <p>Entre los atletas del club, varios nombres brillaron con luz propia. Pedro Sánchez, uno de los triatletas más experimentados del equipo, logró un tiempo excepcional en el segmento de ciclismo, mientras que María López, una de las promesas jóvenes del club, impresionó con su desempeño en la carrera a pie, manteniendo un ritmo constante y firme hasta el final.</p>
+
+            <p>Ambos atletas, junto con el resto del equipo, contribuyeron de manera significativa a la posición final del club en la clasificación general. "Este subcampeonato es el resultado del esfuerzo colectivo y la dedicación de cada uno de los miembros del equipo", comentó Sánchez tras la competencia.</p>
+
+            <h3>Preparación y Estrategia</h3>
+            <p>El éxito del club Triatlón Rincón no es casualidad. La preparación para esta competición ha sido meticulosa, con meses de entrenamiento específico y planificación estratégica. Los entrenadores han trabajado de cerca con los atletas para optimizar su rendimiento en cada una de las disciplinas del triatlón cross.</p>
+
+            <p>La estrategia implementada durante la competencia también jugó un papel crucial. El equipo supo gestionar sus fuerzas y mantener la concentración en todo momento, lo que les permitió superar las dificultades del terreno y las condiciones climáticas variables.</p>
+
+            <h3>Mirando Hacia el Futuro</h3>
+            <p>Con este subcampeonato, el club Triatlón Rincón refuerza su posición como uno de los equipos más fuertes y prometedores del país. Los miembros del equipo ya están enfocados en sus próximos objetivos y competiciones, con la mirada puesta en alcanzar nuevos éxitos y seguir creciendo como grupo.</p>
+
+            <p>La comunidad del triatlón y los aficionados locales han celebrado este logro con entusiasmo, reconociendo el talento y la dedicación de los atletas del club. Sin duda, el futuro del Triatlón Rincón luce brillante, y este subcampeonato es solo el comienzo de muchos más triunfos por venir.</p>
+
+            <h3>Reacciones y Felicitaciones</h3>
+            <p>Las redes sociales y los medios locales se han llenado de mensajes de felicitación y apoyo para el club Triatlón Rincón. Las autoridades deportivas de la región también han expresado su orgullo y han reiterado su compromiso de seguir apoyando el desarrollo del triatlón en la comunidad.</p>
+
+            <p>El presidente del club, José Martínez, manifestó su agradecimiento a todos los que han apoyado al equipo y aseguró que seguirán trabajando con la misma pasión y dedicación. "Este es un logro de todos, y seguiremos dando lo mejor de nosotros en cada competencia", concluyó Martínez.</p>
+        </div>
+
+        <p class="noticia-referencia">Referencia: Federación Española de Triatlón.</p>
+    </div>
+
+    <div id="contenedor-parte-abajo-noticia">
+        <a href="./noticias.html"><p id="enlace-volver">← Volver</p></a>
+        <a href="./Triatlon-Sevilla.html"><p id="enlace-noticia">Siguiente noticia →</p></a>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia: Éxito en el Triatlón Internacional de Sevilla</title>
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="noticia-container">
+        <h1 class="noticia-titulo">Éxito en el Triatlón Internacional de Sevilla</h1>
+        <h2 class="noticia-subtitulo">Participantes de todo el mundo destacan en una jornada de competición y
+            camaradería</h2>
+        <p class="noticia-fecha-autor">Escrito por Iker Roca | 9 de junio de 2024</p>
+        <img src="../../../assets/img/Triatlon Sevilla.jpg" alt="Triatlón en Sevilla" class="noticia-imagen">
+        <div class="noticia-contenido">
+            <p>El Triatlón Internacional de Sevilla se celebró este fin de semana con gran éxito, atrayendo a atletas de
+                todo el mundo. El evento, conocido por su desafiante recorrido y el ambiente festivo, no defraudó y
+                ofreció una jornada repleta de emoción y deporte.</p>
+            <p>La prueba comenzó temprano en la mañana con la fase de natación en el río Guadalquivir, seguido por un
+                recorrido en bicicleta a través de las calles de la ciudad, y finalizó con una carrera a pie que llevó a
+                los participantes hasta el emblemático Parque de María Luisa. Los espectadores se alinearon a lo largo
+                del recorrido, animando a los triatletas y creando una atmósfera electrizante.</p>
+            <p>Entre los destacados, el español Javier Gómez Noya se llevó el primer lugar en la categoría masculina,
+                demostrando una vez más por qué es considerado uno de los mejores triatletas del mundo. En la categoría
+                femenina, la británica Lucy Charles-Barclay cruzó la meta en primer lugar, consolidando su posición como
+                una de las favoritas en el circuito internacional.</p>
+            <p>El evento no solo fue una prueba de resistencia y habilidad para los atletas, sino también una
+                oportunidad para promover el deporte y la vida saludable en la comunidad. Los organizadores del Triatlón
+                de Sevilla destacaron la importancia de estos eventos para fomentar la participación deportiva y el
+                turismo en la ciudad.</p>
+            <p>"Estamos muy contentos con la participación y el entusiasmo mostrado por todos. Este evento demuestra que
+                Sevilla es un lugar ideal para el deporte y la convivencia", afirmó María López, coordinadora del
+                triatlón.</p>
+        </div>
+        <p class="noticia-referencia">Referencia: Triatlón Internacional de Sevilla, Asociación de Triatlón de España.
+        </p>
+    </div>
+    <div id="contenedor-parte-abajo-noticia">
+        <a href="./noticias.html"><p id="enlace-volver">← Volver</p></a>
+          <a href="./internacional.html" ><p id="enlace-noticia">Siguiente noticia →</p></a>
+      </div>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header-noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '../../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>
