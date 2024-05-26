@@ -25,71 +25,118 @@
             <div id="busqueda">
                 <h2>Búsqueda avanzada</h2>
             </div>
-
             <div id="container-filtros">
-                <div class="fila">
-                    <ul>
-                        <li>
-                            <label for="filtro-modalidad"></label>
-                            <select name="modalidad" id="filtro-modalidad" class="listas-filtros">
-                                <option value="Todas las modalidades">Todas las modalidades</option>
+                <ul>
+                    <li>
+                        <label for="filtro-modalidad"></label>
+                        <select name="modalidad" id="filtro-modalidad" class="listas-filtros">
+                            <option value="Todas las modalidades">Todas las modalidades</option>
+                            <option value="Triatlon">Triatlón</option>
+                            <option value="Duatlon">Duatlón</option>
+                            <option value="Triatlon Cros">Triatlón Cros</option>
+                            <option value="Duatlon Cros">Duatlón Cros</option>
+                            <option value="Acuatlon">Acuatlón</option>
+                            <option value="Aquabike">Aquabike</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="filtro-distancia"></label>
+                        <select name="distancia" id="filtro-distancia" class="listas-filtros">
+                            <option value="Todas las distancias">Todas las distancias</option>
+                            <option value="Corta">Corta</option>
+                            <option value="Sprint">Sprint</option>
+                            <option value="Supersprint">Supersprint</option>
+                            <option value="Media distancia">Media distancia</option>
+                            <option value="Olimpica">Olímpica</option>
+                            <option value="Larga distancia">Larga distancia</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="filtro-categoria"></label>
+                        <select name="categoria" id="filtro-categoria" class="listas-filtros">
+                            <option value="Todas las edades">Todas las edades</option>
+                            <option value="Menores">Menores</option>
+                            <option value="Adultos">Adultos</option>
+                        </select>
+                    </li>
+                </ul>
+                <button class="botones-filtros" id="boton-buscar">Buscar</button>
+                <button class="botones-filtros" id="boton-reiniciar">Reiniciar filtros</button>
+
+
+                <div id="modal-competicion" class="modal-competicion">
+                    <div id="formulario-competicion-container">
+                        <h3 id="titulo-añadir-competicion">Añadir competicion</h3>
+                        <button id="cerrar-formulario" class="cerrar-formulario">X</button>
+                        <form method="post" action="../assets/php/agregar-competicion.php" id="formulario-competicion"
+                            class="formulario-competicion">
+                            <label for="modalidad">Modalidad:</label>
+                            <select name="modalidad" id="modalidad" required>
                                 <option value="Triatlon">Triatlón</option>
                                 <option value="Duatlon">Duatlón</option>
                                 <option value="Triatlon Cros">Triatlón Cros</option>
                                 <option value="Duatlon Cros">Duatlón Cros</option>
                                 <option value="Acuatlon">Acuatlón</option>
-                                <option value="Aquabike">Aquabike</option>
-                            </select>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <label for="filtro-distancia"></label>
-                            <select name="distancia" id="filtro-distancia" class="listas-filtros">
-                                <option value="Todas las distancias">Todas las distancias</option>
-                                <option value="Corta">Corta</option>
-                                <option value="Sprint">Sprint</option>
-                                <option value="Supersprint">Supersprint</option>
-                                <option value="Media distancia">Media distancia</option>
-                                <option value="Olimpica">Olímpica</option>
-                                <option value="Larga distancia">Larga distancia</option>
-                            </select>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <label for="filtro-categoria"></label>
-                            <select name="categoria" id="filtro-categoria" class="listas-filtros">
-                                <option value="Todas las edades">Todas las edades</option>
-                                <option value="Menores">Menores</option>
+                                <option value="Aquabike">AquaBike</option>
+                            </select><br><br>
+
+                            <label for="competicion">Competición:</label>
+                            <textarea name="competicion" id="competicion" placeholder="Nombre de la competición"
+                                required></textarea><br><br>
+
+                            <label for="enlace">Enlace:</label>
+                            <input type="text" name="enlace" id="enlace" placeholder="Enlace de la competición"
+                                required><br><br>
+
+                            <label for="categoria">Categoría:</label>
+                            <select name="categoria" id="categoria" required>
                                 <option value="Adultos">Adultos</option>
-                            </select>
-                        </li>
-                    </ul>
-                </div>
-                <div class="fila">
-                    <button class="botones-filtros" id="boton-buscar">Buscar</button>
-                    <button class="botones-filtros" id="boton-reiniciar">Reiniciar filtros</button>
-                    <button id="boton-anadir-competicion" class="botones-filtros">Añadir Competición</button>
-                    <button id="boton-eliminar-competicion" class="botones-filtros">Eliminar Competición</button>
-                </div>
-            </div>
+                                <option value="Menores">Menores</option>
+                            </select><br><br>
 
-            <div id="modal-eliminar-competicion" class="modal-competicion">
-                <div id="formulario-eliminar-competicion-container">
-                    <h3 id="titulo-eliminar-competicion">Eliminar competicion</h3>
-                    <button id="cerrar-formulario-eliminar" class="cerrar-formulario">X</button>
-                    <form method="post" action="../assets/php/eliminar-competicion.php"
-                        id="formulario-eliminar-competicion" class="formulario-competicion">
-                        <label for="competicion-eliminar">Competición:</label>
-                        <input type="text" name="competicion" id="competicion-eliminar"
-                            placeholder="Nombre de la competición a eliminar" required><br><br>
-                        <input type="submit" id="enviar-eliminar" class="botones-formulario" value="Eliminar">
-                    </form>
-                </div>
-            </div>
+                            <label for="distancia">Distancia:</label>
+                            <select name="distancia" id="distancia" required>
+                                <option value="SuperSprint">SuperSprint</option>
+                                <option value="Sprint">Sprint</option>
+                                <option value="Corta">Corta</option>
+                                <option value="Olimpica">Olimpica</option>
+                                <option value="Media Distancia">Media Distancia</option>
+                                <option value="Larga Distancia">Larga Distancia</option>
+                            </select><br><br>
 
-        </div>
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" name="fecha" id="fecha"><br><br>
+
+                            <input type="submit" value="Añadir Competición" id="boton-añadir-competi">
+                        </form>
+                    </div>
+                </div>
+                <button id="boton-anadir-competicion" class="botones-filtros">Añadir Competición</button>
+
+
+
+
+
+                <button id="boton-eliminar-competicion" class="botones-filtros">Eliminar Competición</button>
+                <div id="modal-eliminar-competicion" class="modal-competicion">
+                    <div id="formulario-eliminar-competicion-container">
+                        <h3 id="titulo-eliminar-competicion">Eliminar competicion</h3>
+                        <button id="cerrar-formulario-eliminar" class="cerrar-formulario">X</button>
+                        <form method="post" action="../assets/php/eliminar-competicion.php"
+                            id="formulario-eliminar-competicion" class="formulario-competicion">
+                            <label for="competicion-eliminar">Competición:</label>
+                            <input type="text" name="competicion" id="competicion-eliminar"
+                                placeholder="Nombre de la competición a eliminar" required><br><br>
+                            <input type="submit" id="enviar-eliminar" class="botones-formulario" value="Eliminar">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
@@ -104,7 +151,6 @@
         </footer>
 
     </main>
-
     <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         const headerContainer = document.getElementById('header');
