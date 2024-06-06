@@ -1474,6 +1474,16 @@ p.texto-noticias-slider {
     .contenido-noticias-pequeñas {
         width: 300px;;
     }
+    .imagenes-noticias-pequeñas {
+        width: 14rem;
+        height: 11rem;
+    }
+
+    .relato-noticias-pequeñas {
+        font-size: 14px;
+        height: 5rem;
+        width: 14rem;
+    }
 }
 
 
