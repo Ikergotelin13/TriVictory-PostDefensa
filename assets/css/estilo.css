@@ -1522,7 +1522,6 @@ p.texto-noticias-slider {
 @media only screen and (max-width: 500px) {
     #container-noticias-pequeñas {
         margin-bottom: 2rem;
-        margin-left: 1rem;
         justify-content: center;
     }
 
@@ -1532,6 +1531,7 @@ p.texto-noticias-slider {
     .noticias-pequeñas {
         margin-left: 0;
         width: 200px;
+        margin-right: 1.2rem;
     }
 }
 
