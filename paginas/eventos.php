@@ -51,6 +51,10 @@
             <div id="container-filtros">
                 <ul>
                     <li class="lista-eventos">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b4b0b75142ebe5771c3e5a87d00fd5f2952a1a9
                         <label for="filtro-modalidad"></label>
                         <select name="modalidad" id="filtro-modalidad" class="listas-filtros">
                             <option value="Todas las modalidades">Todas las modalidades</option>
@@ -65,6 +69,10 @@
                 </ul>
                 <ul>
                     <li class="lista-eventos">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b4b0b75142ebe5771c3e5a87d00fd5f2952a1a9
                         <label for="filtro-distancia"></label>
                         <select name="distancia" id="filtro-distancia" class="listas-filtros">
                             <option value="Todas las distancias">Todas las distancias</option>
@@ -79,6 +87,10 @@
                 </ul>
                 <ul>
                     <li class="lista-eventos">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b4b0b75142ebe5771c3e5a87d00fd5f2952a1a9
                         <label for="filtro-categoria"></label>
                         <select name="categoria" id="filtro-categoria" class="listas-filtros">
                             <option value="Todas las edades">Todas las edades</option>
@@ -90,7 +102,11 @@
                 <button class="botones-filtros" id="boton-buscar">Buscar</button>
                 <button class="botones-filtros" id="boton-reiniciar">Reiniciar filtros</button>
 
+<<<<<<< HEAD
                 <!-- Modal Añadir Competición -->
+=======
+
+>>>>>>> 4b4b0b75142ebe5771c3e5a87d00fd5f2952a1a9
                 <div id="modal-competicion" class="modal-competicion">
                     <div id="formulario-competicion-container">
                         <h3 id="titulo-añadir-competicion">Añadir competicion</h3>
@@ -274,3 +290,7 @@
 
 </html>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b4b0b75142ebe5771c3e5a87d00fd5f2952a1a9
