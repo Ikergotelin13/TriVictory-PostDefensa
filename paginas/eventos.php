@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
     <link rel="stylesheet" href="../assets/css/estilo.css">
+    <style>
+        /* Estilo básico para el modal */
+        #modal-eliminar-competicion {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +50,8 @@
             </div>
             <div id="container-filtros">
                 <ul>
-                    <li>
+                    <li class="lista-eventos">
+
                         <label for="filtro-modalidad"></label>
                         <select name="modalidad" id="filtro-modalidad" class="listas-filtros">
                             <option value="Todas las modalidades">Todas las modalidades</option>
@@ -41,7 +65,8 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>
+                    <li class="lista-eventos">
+
                         <label for="filtro-distancia"></label>
                         <select name="distancia" id="filtro-distancia" class="listas-filtros">
                             <option value="Todas las distancias">Todas las distancias</option>
@@ -55,7 +80,8 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>
+                    <li class="lista-eventos">
+
                         <label for="filtro-categoria"></label>
                         <select name="categoria" id="filtro-categoria" class="listas-filtros">
                             <option value="Todas las edades">Todas las edades</option>
@@ -117,13 +143,10 @@
                 </div>
                 <button id="boton-anadir-competicion" class="botones-filtros">Añadir Competición</button>
 
-
-
-
-
+                <!-- Modal Eliminar Competición -->
                 <button id="boton-eliminar-competicion" class="botones-filtros">Eliminar Competición</button>
                 <div id="modal-eliminar-competicion" class="modal-competicion">
-                    <div id="formulario-eliminar-competicion-container">
+                    <div id="formulario-eliminar-competicion-container" class="modal-content">
                         <h3 id="titulo-eliminar-competicion">Eliminar competicion</h3>
                         <button id="cerrar-formulario-eliminar" class="cerrar-formulario">X</button>
                         <form method="post" action="../assets/php/eliminar-competicion.php"
@@ -194,10 +217,7 @@
         navMenu.classList.toggle('active');
     }
 
-
-
-
-    /*AÁDIR COMPETICION */
+    /*AÑADIR COMPETICION */
     document.getElementById("boton-anadir-competicion").addEventListener("click", function() {
         document.getElementById("modal-competicion").style.display = "block";
     });
@@ -205,8 +225,6 @@
     document.getElementById("cerrar-formulario").addEventListener("click", function() {
         document.getElementById("modal-competicion").style.display = "none";
     });
-
-
 
     /* ELIMINAR COMPETICION */
     document.getElementById("boton-eliminar-competicion").addEventListener("click", function() {
@@ -216,7 +234,6 @@
     document.getElementById("cerrar-formulario-eliminar").addEventListener("click", function() {
         document.getElementById("modal-eliminar-competicion").style.display = "none";
     });
-
 
     /*FILTRO COMPETI*/
     document.getElementById('boton-buscar').addEventListener('click', function() {
@@ -259,3 +276,5 @@
 </body>
 
 </html>
+
+
