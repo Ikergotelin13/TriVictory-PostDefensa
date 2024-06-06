@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="loader" id="loader">
+
+    </div>
+    <div class="container-noticias" id="container">
+        <header class="header">
+            <h1 class="titulo">Noticias de Última Hora</h1>
+        </header>
+        <section id="deportes" class="seccion">
+            <h2 class="titulo-seccion">Deportes</h2>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Equipo local gana el campeonato de fútbol</h3>
+                <p class="descripcion-noticia">El equipo de fútbol local se alzó con la victoria en el
+                    campeonato regional después de una emocionante final.</p>
+                <p class="fuente-noticia">Fuente: Diario Deportivo Local</p>
+            </div>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Nueva marca mundial en natación</h3>
+                <p class="descripcion-noticia">Un nadador rompe el récord mundial en los 100 metros estilo libre
+                    en una competición internacional.</p>
+                <p class="fuente-noticia">Fuente: Federación Internacional de Natación</p>
+            </div>
+        </section>
+        <section id="tecnologia" class="seccion">
+            <h2 class="titulo-seccion">Tecnología</h2>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Lanzamiento del nuevo smartphone de última generación</h3>
+                <p class="descripcion-noticia">La empresa tecnológica líder presenta su último modelo de
+                    smartphone con características innovadoras y diseño elegante.</p>
+                <p class="fuente-noticia">Fuente: Sitio web de la empresa</p>
+            </div>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Avances en inteligencia artificial revolucionan la industria</h3>
+                <p class="descripcion-noticia">Los últimos desarrollos en inteligencia artificial están
+                    transformando diversos sectores, desde la medicina hasta la automoción.</p>
+                <p class="fuente-noticia">Fuente: Revista de Tecnología Avanzada</p>
+            </div>
+        </section>
+        <section id="entretenimiento" class="seccion">
+            <h2 class="titulo-seccion">Entretenimiento</h2>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Estreno de la nueva película de acción en cines</h3>
+                <p class="descripcion-noticia">La película más esperada del año llega a los cines con
+                    espectaculares escenas de acción y efectos especiales.</p>
+                <p class="fuente-noticia">Fuente: Estudio de Cine Internacional</p>
+            </div>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Concierto benéfico recauda fondos para organizaciones sociales</h3>
+                <p class="descripcion-noticia">Grandes estrellas de la música se unen en un concierto único para
+                    apoyar a causas solidarias y recaudar fondos para organizaciones sin ánimo de lucro.</p>
+                <p class="fuente-noticia">Fuente: Nota de prensa del evento</p>
+            </div>
+        </section>
+        <section id="salud" class="seccion">
+            <h2 class="titulo-seccion">Salud</h2>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Descubrimiento de nueva terapia contra el cáncer</h3>
+                <p class="descripcion-noticia">Investigadores anuncian un prometedor avance en la lucha contra
+                    el cáncer mediante una terapia innovadora que podría mejorar las tasas de supervivencia.</p>
+                <p class="fuente-noticia">Fuente: Instituto de Investigación Oncológica</p>
+            </div>
+            <div class="noticia">
+                <h3 class="titulo-noticia">Consejos para una alimentación saludable</h3>
+                <p class="descripcion-noticia">Expertos en nutrición comparten recomendaciones para mantener una
+                    dieta equilibrada y mejorar la salud en general.</p>
+                <p class="fuente-noticia">Fuente: Asociación de Nutricionistas</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Simulación de carga
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>
+
+</main>
+<footer>
+    <div id="footer"></div>
+</footer>
+<script>
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const headerContainer = document.getElementById('header');
+        const footerContainer = document.getElementById('footer');
+
+        // Obtener la ruta relativa al directorio actual
+        const currentPagePath = window.location.pathname;
+        const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+        // Cargar el encabezado
+        fetch(currentPageDirectory + '/header-usuario.html')
+            .then(response => response.text())
+            .then(data => {
+                headerContainer.innerHTML = data;
+            });
+
+        // Cargar el pie de página
+        fetch(currentPageDirectory + '/../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                footerContainer.innerHTML = data;
+            });
+    });
+</script>
+</body>
+
+</html>

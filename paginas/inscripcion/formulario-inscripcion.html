@@ -25,15 +25,15 @@
                         <div id="lista-superior">
                             <ul id="lista-completa">
                                 <a href="../../paginas/eventos.php">
-                                    <li class="numero">Inicio</li>
+                                    <li class="numero lista-apartados-inscripcion">Inicio</li>
                                 </a>
-                                <li class="numero">Inscripciones
+                                <li class="numero lista-apartados-inscripcion">Inscripciones
                                     <ul id="lista-desplegable-inscripcion">
-                                        <a href="../../paginas/inscripcion/listado-participantes.html">
-                                            <li class="enlaces-inscripciones">Listado de participantes</li>
+                                        <a href="../../paginas/inscripcion/listado-participantes.php">
+                                            <li class="enlaces-inscripciones lista-apartados-inscripcion">Listado de participantes</li>
                                         </a>
                                         <a href="">
-                                            <li class="enlaces-inscripciones">Inscribete</li>
+                                            <li class="enlaces-inscripciones lista-apartados-inscripcion">Inscribete</li>
                                         </a>
                                     </ul>
                                 </li>
@@ -269,7 +269,7 @@
                                     </select>
                                 </section>
                                 <div id="botones-formularios">
-                                    <a href="../../paginas/inscripcion/listado-participantes.html"><button type="submit"
+                                    <a href="../../paginas/inscripcion/listado-participantes.php"><button type="submit"
                                             id="boton-enviar" class="botones-formularios">Inscribirte</button></a>
                                     <button type="reset" id="boton-reiniciar-formulario">Resetear</button>
                                 </div>
@@ -309,8 +309,8 @@
                 });
         });
 
-        // Función para mostrar el mensaje de éxito y redireccionar después de enviar el formulario
-        function submitForm(event) {
+         // Función para mostrar el mensaje de éxito y redireccionar después de enviar el formulario
+         function submitForm(event) {
             event.preventDefault(); // Evitar el envío del formulario por defecto
             const form = event.target; // Obtener el formulario enviado
 
@@ -326,9 +326,9 @@
                 mensajeRedireccion.style.display = 'block'; // Mostrar el mensaje de redirección
                 // Redireccionar a otra página después de 2 segundos
                 setTimeout(() => {
-                    window.location.href = '../inscripcion/listado-participantes.html';
-                }, 2000);
-            }, 2000);
+                    window.location.href = '../../paginas/inscripcion/listado-participantes.php'; // Cambiar por la URL deseada
+                }, 2000); // 2000 milisegundos = 2 segundos
+            }, 2000); // 2000 milisegundos = 2 segundos
         }
 
     </script>

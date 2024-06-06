@@ -46,6 +46,6 @@ if (isset($_POST['competicion'])) {
 $conn->close();
 
 // Redireccionar después de cerrar la conexión
-header("Location: ../../paginas/eventos.php");
+header("Location: ../../paginas/eventos-copy.php");
 exit;
 ?>

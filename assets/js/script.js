@@ -36,12 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function actualizarTabla() {
- 
+    fetch('procesar-formulario.php?accion=obtenerDatos')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('tabla-participantes').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error al actualizar la tabla:', error);
+        });
 }
-
-
-
-
 
 
 

@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO listado (Modalidad, Competicion, Categoria, Distancia, Fecha, Enlace) VALUES ('$modalidad', '$competicion_nombre', '$categoria', '$distancia', '$fecha', '$enlace')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../../paginas/eventos.php");
+        header("Location: ../../paginas/eventos-copy.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

@@ -26,7 +26,7 @@
             </div>
             <div id="container-filtros">
                 <ul>
-                    <li>
+                    <li class="lista-eventos">
                         <label for="filtro-modalidad"></label>
                         <select name="modalidad" id="filtro-modalidad" class="listas-filtros">
                             <option value="Todas las modalidades">Todas las modalidades</option>
@@ -40,7 +40,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>
+                    <li  class="lista-eventos">
                         <label for="filtro-distancia"></label>
                         <select name="distancia" id="filtro-distancia" class="listas-filtros">
                             <option value="Todas las distancias">Todas las distancias</option>
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>
+                    <li  class="lista-eventos">
                         <label for="filtro-categoria"></label>
                         <select name="categoria" id="filtro-categoria" class="listas-filtros">
                             <option value="Todas las edades">Todas las edades</option>

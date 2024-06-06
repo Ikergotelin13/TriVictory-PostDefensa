@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <div class="loader" id="loader"></div>
+
+        <!-- Contenido de la página -->
+        <div class="container-noticias" id="container">
+            <header class="header">
+                <h1 class="titulo">Noticias de Última Hora</h1>
+            </header>
+            <section id="deportes" class="seccion">
+                <h2 class="titulo-seccion">Logros y resultados</h2>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Nuevo récord en Ironman de Hawaii</h3>
+                    <p class="descripcion-noticia">Un atleta logra un tiempo récord en la legendaria competición de
+                        Ironman en Hawaii, estableciendo un nuevo estándar en la disciplina.</p>
+                    <p class="fuente-noticia">Fuente: Ironman World Championship</p>
+                </div>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Triatleta español gana medalla de oro en los Juegos Olímpicos</h3>
+                    <p class="descripcion-noticia">Un triatleta español se alza con la medalla de oro en los Juegos
+                        Olímpicos de Verano, demostrando su dominio en las tres disciplinas del triatlón.</p>
+                    <p class="fuente-noticia">Fuente: Comité Olímpico Internacional</p>
+                </div>
+            </section>
+            <section id="tecnologia" class="seccion">
+                <h2 class="titulo-seccion">Tecnología</h2>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Nuevas tecnologías aplicadas al entrenamiento de triatlón</h3>
+                    <p class="descripcion-noticia">Se presentan nuevas herramientas tecnológicas diseñadas
+                        específicamente para mejorar el rendimiento y la eficiencia en el entrenamiento de triatlón,
+                        incluyendo dispositivos de seguimiento, análisis de datos y aplicaciones móviles especializadas.
+                    </p>
+                    <p class="fuente-noticia">Fuente: Revista de Tecnología Deportiva</p>
+                </div>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Desarrollo de trajes de competición con tecnología avanzada</h3>
+                    <p class="descripcion-noticia">Empresas líderes en el sector del triatlón presentan nuevos trajes de
+                        competición con materiales innovadores y tecnología avanzada que proporcionan mayor aerodinámica
+                        y confort, ayudando a los atletas a mejorar su rendimiento en las pruebas.</p>
+                    <p class="fuente-noticia">Fuente: Sitio web de fabricantes de material deportivo</p>
+                </div>
+            </section>
+
+            <section id="entretenimiento" class="seccion">
+                <h2 class="titulo-seccion">Entretenimiento</h2>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Documental sobre la historia del triatlón</h3>
+                    <p class="descripcion-noticia">Se estrena un emocionante documental que explora la evolución y los
+                        desafíos del triatlón a lo largo de los años, destacando las historias de superación, dedicación
+                        y pasión de los triatletas de todo el mundo.</p>
+                    <p class="fuente-noticia">Fuente: Plataforma de streaming de contenido deportivo</p>
+                </div>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Libro inspirador de un triatleta profesional</h3>
+                    <p class="descripcion-noticia">Un reconocido triatleta profesional comparte su historia y
+                        experiencias en un nuevo libro que motiva e inspira a otros atletas a alcanzar sus metas y
+                        superar los obstáculos en el mundo del triatlón.</p>
+                    <p class="fuente-noticia">Fuente: Entrevista en programa de televisión deportiva</p>
+                </div>
+            </section>
+
+            <section id="salud" class="seccion">
+                <h2 class="titulo-seccion">Salud</h2>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Importancia de una nutrición adecuada para triatletas</h3>
+                    <p class="descripcion-noticia">Nutricionistas especializados en deporte destacan la importancia de
+                        una alimentación equilibrada y personalizada para los triatletas, proporcionando recomendaciones
+                        específicas para optimizar el rendimiento, acelerar la recuperación y prevenir lesiones.</p>
+                    <p class="fuente-noticia">Fuente: Asociación de Nutricionistas Deportivos</p>
+                </div>
+                <div class="noticia">
+                    <h3 class="titulo-noticia">Beneficios de la hidratación en el triatlón</h3>
+                    <p class="descripcion-noticia">Expertos en medicina deportiva subrayan la importancia de una
+                        adecuada hidratación antes, durante y después de las competiciones de triatlón, destacando sus
+                        efectos positivos en el rendimiento, la recuperación muscular y la prevención de calambres y
+                        fatiga.</p>
+                    <p class="fuente-noticia">Fuente: Publicación científica especializada en deporte y salud</p>
+                </div>
+            </section>
+
+        </div>
+
+        <script>
+            // Simulación de carga
+            window.addEventListener("load", function () {
+                const loader = document.getElementById("loader");
+                loader.classList.add("hidden");
+            });
+        </script>
+    </main>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

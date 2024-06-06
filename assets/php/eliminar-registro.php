@@ -28,10 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["mensaje"] = "Error al eliminar el registro: " . $conexion->error;
             }
 
-            // Cerrar la conexión y redirigir a la URL deseada
+            // Cerrar la conexión y redirigir a la URL 
             $stmt->close();
             $conexion->close();
-            // Redireccionar a la URL deseada con mensaje de éxito
+            // Redireccionar a la URL 
             header("Location: {$_SERVER['HTTP_REFERER']}?mensaje=Registro eliminado correctamente");
             exit();
         }
